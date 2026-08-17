@@ -9,6 +9,325 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .legal-section {
+      background: #fffaf1;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    .legal-section.alt {
+      background: #eef4f0;
+    }
+
+    .legal-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .legal-wrap > .eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .legal-wrap > h2 {
+      font-size: clamp(40px, 5vw, 68px);
+      margin-bottom: 22px;
+    }
+
+    .legal-intro {
+      font-size: 18px;
+      color: #5a6e68;
+      max-width: 820px;
+      margin-bottom: 42px;
+    }
+
+    .legal-block {
+      padding: 28px 0;
+      border-top: 1px solid rgba(23, 50, 44, 0.16);
+    }
+
+    .legal-block:last-child {
+      border-bottom: 1px solid rgba(23, 50, 44, 0.16);
+    }
+
+    .legal-block h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .legal-block p {
+      margin-bottom: 14px;
+      color: #50635f;
+    }
+
+    .legal-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-contact {
+      margin-top: 34px;
+      padding: 24px 26px;
+      border-radius: 18px;
+      background: rgba(23, 50, 44, 0.06);
+    }
+
+    .legal-contact p {
+      margin: 0;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .legal-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      .legal-block h3 {
+        font-size: 24px;
+      }
+    }
+  </style>
+
+
+  <style>
+    .services-section {
+      background: #f7f3e9;
+    }
+
+    .services-intro {
+      max-width: 860px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .services-intro h2 {
+      font-size: clamp(40px, 5.8vw, 76px);
+      letter-spacing: -.035em;
+      margin-bottom: 20px;
+    }
+
+    .services-intro > p:last-child {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #5a6e68;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: #fff;
+      border: 1px solid rgba(23, 50, 44, .08);
+      border-radius: 26px;
+      padding: 30px;
+    }
+
+    .service-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      background: #d8e8e2;
+      color: #17322c;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .service-card h3 {
+      font: 600 29px/1.15 "Playfair Display", serif;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      margin-bottom: 0;
+      color: #60716c;
+    }
+
+    .service-philosophy {
+      margin: 60px auto 0;
+      max-width: 1100px;
+      padding: 48px;
+      border-radius: 30px;
+      background: #17322c;
+      color: #fff;
+    }
+
+    .service-philosophy h3 {
+      font: 600 clamp(34px, 4.5vw, 54px)/1.12 "Playfair Display", serif;
+      max-width: 850px;
+      margin-bottom: 18px;
+    }
+
+    .service-philosophy p {
+      color: #b7c9c4;
+      max-width: 850px;
+      font-size: 17px;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .service-tags span {
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .service-plans {
+      margin-top: 70px;
+    }
+
+    .service-plans-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+    }
+
+    .service-plans-heading h3 {
+      font: 600 clamp(34px, 4.5vw, 54px)/1.12 "Playfair Display", serif;
+      margin-bottom: 14px;
+    }
+
+    .service-plans-heading p {
+      color: #60716c;
+    }
+
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .plan-card {
+      background: #fff;
+      border: 1px solid rgba(23,50,44,.1);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .plan-card.featured {
+      background: #17322c;
+      color: #fff;
+    }
+
+    .plan-label {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #497a6e;
+      margin-bottom: 8px;
+    }
+
+    .plan-card.featured .plan-label {
+      color: #d8e8e2;
+    }
+
+    .plan-card h4 {
+      font: 600 29px/1.15 "Playfair Display", serif;
+      margin-bottom: 18px;
+    }
+
+    .plan-meta {
+      font-size: 13px;
+      color: #6c7b76;
+      margin-bottom: 20px;
+    }
+
+    .plan-card.featured .plan-meta {
+      color: #b7c9c4;
+    }
+
+    .plan-list {
+      margin: 0 0 24px;
+      padding-left: 18px;
+      color: #60716c;
+    }
+
+    .plan-list li {
+      margin: 8px 0;
+    }
+
+    .plan-card.featured .plan-list {
+      color: #d5dfdc;
+    }
+
+    .service-note {
+      max-width: 900px;
+      margin: 22px auto 0;
+      text-align: center;
+      color: #6a7974;
+      font-size: 13px;
+    }
+
+    .referral-box {
+      max-width: 900px;
+      margin: 55px auto 0;
+      padding: 34px;
+      border-radius: 24px;
+      background: #d8e8e2;
+      text-align: center;
+    }
+
+    .referral-box h3 {
+      font: 600 34px/1.15 "Playfair Display", serif;
+      margin-bottom: 12px;
+    }
+
+    .referral-box p {
+      max-width: 720px;
+      margin: 0 auto 14px;
+      color: #50635f;
+    }
+
+    .referral-reward {
+      font: 600 23px/1.3 "Playfair Display", serif;
+      margin-top: 18px;
+      color: #17322c;
+    }
+
+    @media(max-width: 860px) {
+      .service-grid,
+      .plan-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-philosophy {
+        padding: 34px 24px;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <header class="site-header" id="top">
@@ -16,6 +335,7 @@
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav" aria-label="Primary navigation">
       <a href="#about">About</a>
+      <a href="#services">Services</a>
       <a href="#path">Your Lifepath</a>
       <a href="#journey">Begin</a>
       <a href="#faq">FAQ</a>
@@ -60,6 +380,152 @@
         </div>
       </div>
     </section>
+
+
+    <section class="section services-section" id="services">
+      <div class="services-intro">
+        <p class="eyebrow">Services &amp; Learning Program</p>
+        <h2>Complete well-being across the dimensions of life.</h2>
+        <p>
+          The Lifestyle for Lifetime™ service approach brings together physical, mental,
+          emotional, spiritual, and social well-being through personalised learning,
+          mindful observation, and practical lifestyle guidance.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="service-number">01</span>
+          <h3>Personalized Training</h3>
+          <p>Tailored fitness plans that consider individual health conditions, goals, and preferences, including strength, cardio, flexibility, and functional movement.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">02</span>
+          <h3>Nutritional Guidance</h3>
+          <p>Guidance focused on whole, nutrient-dense foods together with learning around mindful eating and developing a healthier relationship with food.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">03</span>
+          <h3>Mindfulness &amp; Meditation</h3>
+          <p>Guided meditation and mindfulness practices intended to support mental clarity, emotional stability, and greater awareness in everyday activities.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">04</span>
+          <h3>Emotional Well-Being</h3>
+          <p>One-to-one coaching conversations exploring emotional health, stress management, resilience, and the cultivation of constructive mental habits.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">05</span>
+          <h3>Spiritual Growth</h3>
+          <p>Learning and activities that encourage exploration of personal beliefs, connection with self, and greater awareness of one's place within life.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">06</span>
+          <h3>Social Well-Being</h3>
+          <p>Learning related to communication, relationship-building, community participation, and the development of meaningful social connections.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">07</span>
+          <h3>Integrative Practices</h3>
+          <p>Yoga, Pranayama, and Pilates practices used to support physical fitness, relaxation, body awareness, and inner balance where appropriate.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">08</span>
+          <h3>Continuous Assessment</h3>
+          <p>Regular check-ins to observe progress and regulate the learning approach according to the participant's changing needs and goals.</p>
+        </article>
+      </div>
+
+      <div class="service-philosophy">
+        <p class="eyebrow">Learning Philosophy</p>
+        <h3>Self-Awareness · Self-Regulation · Self-Realization</h3>
+        <p>
+          The learning process is designed to help participants observe their thoughts,
+          actions, and functions with greater awareness, develop greater confidence in
+          their own capacity, and create greater harmony between understanding and action.
+        </p>
+        <div class="service-tags">
+          <span>Let Go</span>
+          <span>Acceptance</span>
+          <span>Surrender</span>
+          <span>Presence</span>
+          <span>Self-Awareness</span>
+          <span>Passion</span>
+          <span>Self-Regulation</span>
+          <span>Patience</span>
+          <span>Self-Realization</span>
+          <span>Liberation</span>
+        </div>
+      </div>
+
+      <div class="service-plans">
+        <div class="service-plans-heading">
+          <p class="eyebrow">How We Work</p>
+          <h3>A learning structure shaped around your present needs.</h3>
+          <p>Rather than offering a fixed package for everyone, the learning approach is discussed after understanding your present lifestyle, priorities, availability, and what requires attention.</p>
+        </div>
+
+        <div class="plan-grid">
+          <article class="plan-card">
+            <span class="plan-label">Personalized Learning</span>
+            <h4>Begin with your present reality</h4>
+            <p class="plan-meta">The learning journey starts by understanding your current lifestyle, priorities, and individual needs.</p>
+            <ul class="plan-list">
+              <li>Individualized learning direction</li>
+              <li>Guidance based on present needs</li>
+              <li>Practical lifestyle application</li>
+              <li>Appropriate progression over time</li>
+            </ul>
+            <a class="btn btn-secondary" href="#contact">Connect With Us</a>
+          </article>
+
+          <article class="plan-card featured">
+            <span class="plan-label">Flexible Engagement</span>
+            <h4>Learning that adapts with you</h4>
+            <p class="plan-meta">The structure and frequency of sessions are discussed according to suitability, availability, and individual circumstances.</p>
+            <ul class="plan-list">
+              <li>One-to-one learning conversations</li>
+              <li>Flexible session structure</li>
+              <li>Online or in-person where appropriate</li>
+              <li>Ongoing observation and regulation</li>
+            </ul>
+            <a class="btn btn-secondary light" href="#contact">Begin Your Journey</a>
+          </article>
+
+          <article class="plan-card">
+            <span class="plan-label">Clarity First</span>
+            <h4>Understand before you begin</h4>
+            <p class="plan-meta">A Lifestyle Clarity Assessment™ and one-to-one conversation help determine an appropriate educational direction.</p>
+            <ul class="plan-list">
+              <li>Lifestyle Clarity Assessment™</li>
+              <li>One-to-one clarity conversation</li>
+              <li>Identification of priorities</li>
+              <li>Appropriate learning pathway</li>
+            </ul>
+            <a class="btn btn-secondary" href="#contact">Start With Clarity</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="referral-box">
+        <p class="eyebrow">Refer &amp; Earn</p>
+        <h3>Help a friend and receive a complimentary coaching package.</h3>
+        <p>
+          Existing clients who refer a friend or family member who enrols in and completes
+          payment for the 3-Month Lifestyle Program may receive the referral reward described below.
+        </p>
+        <div class="referral-reward">Free 1-Month Coaching Package · 12 Personalized Sessions</div>
+        <p class="small">Terms and conditions apply. Available to existing clients only.</p>
+      </div>
+    </section>
+
 
     <section class="section reflection">
       <div class="reflection-card">
@@ -256,6 +722,126 @@
         </form>
       </div>
     </section>
+
+    <section class="section legal-section" id="terms">
+      <div class="legal-wrap">
+        <p class="eyebrow">Legal</p>
+        <h2>Terms &amp; Conditions</h2>
+
+        <div class="legal-block">
+          <h3>Educational Nature of Services</h3>
+          <p>Lifestyle for Lifetime™ provides educational guidance focused on awareness, self-observation, self-regulation, lifestyle learning, and mindful living. Our services are educational in nature and are not a substitute for medical diagnosis, treatment, psychotherapy, or other licensed professional healthcare.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Participation &amp; Personal Responsibility</h3>
+          <p>Learning requires active participation, observation, reflection, and appropriate action by the individual. Each person remains responsible for their own decisions, actions, lifestyle choices, and application of the education provided. Individual observations and outcomes may vary.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Health &amp; Medical Responsibility</h3>
+          <p>Participants are responsible for informing Lifestyle for Lifetime™ of relevant health conditions, injuries, medications, medical advice, or physical limitations before participating in practices. Where appropriate, participants should consult a qualified healthcare professional before beginning or regulating physical activity, breathing practices, nutrition, or other lifestyle practices.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Appointments &amp; Communication</h3>
+          <p>Learning sessions are provided by appointment. Participants are expected to attend scheduled sessions on time and communicate responsibly regarding availability, rescheduling, or cancellation. Communication through WhatsApp, phone, email, or other available channels is intended for appropriate educational communication related to the participant’s learning journey.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Fees, Payments &amp; Cancellations</h3>
+          <p>Fees for assessments, learning sessions, programs, and other services will be communicated before scheduling. Payment confirms the booking and reserves the agreed time for the participant.</p>
+          <p>Once payment has been made and the assessment, session, or program has been scheduled, the fee is non-refundable.</p>
+          <p>If a participant needs to reschedule, Lifestyle for Lifetime™ must be informed at least 24 hours before the scheduled time. The session may then be rescheduled according to mutual availability.</p>
+          <p>A cancellation or rescheduling request made less than 24 hours before the scheduled time, or failure to attend the scheduled session, will be treated as the session having been reserved and the fee will not be refunded or transferred to another session.</p>
+          <p>Lifestyle for Lifetime™ respects the participant's time and commits its time according to every confirmed schedule. Participants are expected to respect the same commitment.</p>
+          <p>If Lifestyle for Lifetime™ is unable to conduct a scheduled session, an alternative date and time will be arranged without loss of that session.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Acceptance of Terms</h3>
+          <p>By booking, enrolling in, accessing, or participating in a Lifestyle for Lifetime™ assessment, learning session, program, or service, you acknowledge that you have read and accepted these Terms &amp; Conditions and agree to participate responsibly. Lifestyle for Lifetime™ may regulate its services, learning structure, schedules, or participation requirements when reasonably necessary while respecting the educational purpose of the program.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section legal-section alt" id="disclaimer">
+      <div class="legal-wrap">
+        <p class="eyebrow">Legal</p>
+        <h2>Disclaimer</h2>
+
+        <div class="legal-block">
+          <h3>Educational Purpose</h3>
+          <p>Lifestyle for Lifetime™ provides educational guidance and lifestyle learning based on awareness, self-observation, self-regulation, and practical observation. The information provided through our website, learning sessions, assessments, and educational materials is intended for educational and informational purposes.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Not Medical or Healthcare Advice</h3>
+          <p>Lifestyle for Lifetime™ does not provide medical diagnosis, medical treatment, psychotherapy, or other licensed healthcare services. Our educational guidance is not intended to replace consultation, diagnosis, or treatment from a qualified healthcare professional.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Individual Responsibility</h3>
+          <p>Each individual is responsible for their own decisions, actions, and participation. You are encouraged to observe your personal circumstances and seek appropriate professional guidance whenever required.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Results and Outcomes</h3>
+          <p>Learning, pracae, participation, and outcomes may vary from person to person. Lifestyle for Lifetime™ does not guarantee specific health, personal, professional, or lifestyle outcomes.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Health &amp; Safety</h3>
+          <p>Before participating in physical activity, Pranayama, breathing practices, nutrition-related practices, fasting, or other lifestyle practices, individuals should consider their health, physical capacity, injuries, medications, pregnancy, and medical history, and seek guidance from a qualified healthcare professional when appropriate.</p>
+          <p>If any practice causes pain, unusual discomfort, dizziness, breathing difficulty, or other concerning symptoms, stop the practice and seek appropriate medical attention.</p>
+        </div>
+
+        <div class="legal-block">
+          <h3>Responsible Participation</h3>
+          <p>By using this website or participating in Lifestyle for Lifetime™ assessments, learning sessions, programs, or practices, you acknowledge their educational nature and accept responsibility for applying the learning appropriately to your individual circumstances. When professional medical, psychological, nutritional, or other licensed care is needful, participants should seek guidance from an appropriately qualified professional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section legal-section" id="privacy">
+      <div class="legal-wrap">
+        <p class="eyebrow">Legal</p>
+        <h2>Privacy Policy</h2>
+
+        <p class="legal-intro">Lifestyle for Lifetime™ respects your privacy and is committed to handling the information you share with us responsibly.</p>
+
+        <div class="legal-block">
+          <p>When you contact us, book a learning session, complete a Lifestyle Clarity Assessment™, communicate through WhatsApp, or use our website, we may receive information such as your name, contact details, responses provided through assessments or forms, and other information you voluntarily share with us.</p>
+        </div>
+
+        <div class="legal-block">
+          <p>This information is used to communicate with you, understand what is needful for your educational journey, provide appropriate learning guidance, manage appointments and services, and improve our educational experience.</p>
+        </div>
+
+        <div class="legal-block">
+          <p>Information shared through assessments, personal communication, or learning interactions is treated with care and is not sold or rented to third parties. Information may be processed through service providers used to operate our website, communication, booking, or related services, or disclosed where required by applicable law.</p>
+        </div>
+
+        <div class="legal-block">
+          <p>You may contact us regarding the personal information you have provided, including requests concerning access, correction, or deletion, subject to applicable legal and operational requirements.</p>
+        </div>
+
+        <div class="legal-block">
+          <p>Our website or communication channels may use cookies or technologies provided by website and third-party service providers. Their handling of information may also be governed by their respective privacy policies.</p>
+        </div>
+
+        <div class="legal-block">
+          <p>By voluntarily providing information through this website or our communication channels, you acknowledge the practices described in this Privacy Policy.</p>
+        </div>
+
+        <div class="legal-contact">
+          <p><strong>Lifestyle for Lifetime™</strong><br>
+          Cuddalore, Tamil Nadu, India<br>
+          Contact: <a href="tel:+917718055967">+91 77180 55967</a></p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -263,11 +849,19 @@
       <strong>Lifestyle for Lifetime™</strong>
       <p>Purposeful learning for everyday life.</p>
     </div>
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#journey">Begin</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+    <div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journey">Begin</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-legal">
+        <a href="#terms">Terms &amp; Conditions</a>
+        <a href="#disclaimer">Disclaimer</a>
+        <a href="#privacy">Privacy Policy</a>
+      </div>
     </div>
     <p class="copyright">© <span id="year"></span> Lifestyle for Lifetime™</p>
   </footer>
